@@ -18,10 +18,14 @@ codecov = { repository = "crate-ci/git-conventional" }
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
-nom = "6"
 unicase = "2.5"
 doc-comment = "0.3"
 serde = { version = "1.0", optional = true, features = ["derive"] }
+
+[dependencies.nom]
+version = "6"
+default-features = false
+features = ["std", "lexical"]
 
 [dev-dependencies]
 indoc = "1.0"
